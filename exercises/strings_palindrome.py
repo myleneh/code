@@ -17,7 +17,7 @@ def is_palindrome(word):
 if __name__ == "__main__":
     try:
         word = argv[1]
-    except:
+    except IndexError:
         print("No input word was given.")
     else:
         if is_palindrome(word):
