@@ -17,6 +17,8 @@ def pig_latin(word):
 
 if __name__ == "__main__":
     try:
-        print(pig_latin(argv[1]))
+        word = argv[1]
     except IndexError:
         print("No input word was given.")
+    else:
+        print(pig_latin(word))
