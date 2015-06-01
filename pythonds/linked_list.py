@@ -24,6 +24,10 @@ class UnorderedList:
         return self.head == None
 
     def add(self,item):
+        """
+        Adds a new item to the list. It needs the item and returns nothing. 
+        Assume the item is not already in the list.
+        """
         temp = Node(item)
         temp.setNext(self.head)
         self.head = temp
@@ -49,6 +53,10 @@ class UnorderedList:
         return found
 
     def remove(self, item):
+        """
+        Removes the item from the list. It needs the item and modifies the 
+        list. Assume the item is present in the list.
+        """
         current = self.head
         previous = None
         found = False
@@ -63,3 +71,40 @@ class UnorderedList:
             self.head = current.getNext()
         else:
             previous.setNext(current.getNext())
+
+    def append(self, item):
+        """
+        Adds a new item to the end of the list making it the last item in the 
+        collection. It needs the item and returns nothing. Assume the item is 
+        not already in the list.
+        """
+        pass
+
+    def insert(self, pos, item):
+        """
+        Adds a new item to the list at position pos. It needs the item and 
+        returns nothing. Assume the item is not already in the list and there 
+        are enough existing items to have position pos.
+        """
+        pass
+
+    def index(self, item):
+        """
+        Returns the position of item in the list. It needs the item and 
+        returns the index. Assume the item is in the list.
+        """
+        pass
+
+    def pop(self):
+        """
+        Removes and returns the last item in the list. It needs nothing and 
+        returns an item. Assume the list has at least one item.
+        """
+        pass
+
+    def pop(self, pos):
+        """
+        Removes and returns the item at position pos. It needs the position 
+        and returns the item. Assume the item is in the list.
+        """
+        pass
