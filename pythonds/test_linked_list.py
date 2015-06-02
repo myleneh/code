@@ -33,6 +33,13 @@ class TestLinkedList(unittest.TestCase):
         self.mylist.remove(54)
         self.assertFalse(self.mylist.search(54))
 
+    def test_index(self):
+        self.assertEqual(self.mylist.index(31), 5)
+
+    def test_append(self):
+        self.mylist.append(10)
+        self.assertTrue(self.mylist.index(10), self.mylist.size()-1)
+
 
 if __name__ == "__main__":
     unittest.main()

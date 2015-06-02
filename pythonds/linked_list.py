@@ -78,7 +78,16 @@ class UnorderedList:
         collection. It needs the item and returns nothing. Assume the item is 
         not already in the list.
         """
-        pass
+        current = self.head
+        new_item = Node(item)
+
+        # Empty list 
+        if current == None:
+            self.head = new_item
+        else:
+            while current.getNext() != None:
+                current = current.getNext()
+            current.setNext(new_item)
 
     def insert(self, pos, item):
         """
@@ -93,7 +102,17 @@ class UnorderedList:
         Returns the position of item in the list. It needs the item and 
         returns the index. Assume the item is in the list.
         """
-        pass
+        current = self.head
+        pos = 0
+        found = False
+        while current != None and not found:
+            if current.getData() == item:
+                found = True
+            else:
+                current = current.getNext()
+                pos = pos + 1
+
+        return pos
 
     def pop(self):
         """
